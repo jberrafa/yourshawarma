@@ -283,10 +283,10 @@ nav ul li a:hover {
     }
 
     nav {
-        position: absolute;
+        position: fixed;
         width: 100%;
-        height: 100vh;
-        background: #000;
+        height: 100%;
+        background: rgb(0, 0, 0, 0.95);
         z-index: 0;
         top: -100vh;
         left: 0;
@@ -326,6 +326,14 @@ nav ul li a:hover {
         margin: 0 10px;
         /* border: solid yellow; */
         font-size: 30px;
+    }
+
+    body {
+        background-image: url(./images/mobile-bg.png)
+    }
+
+    .specials-row {
+        background: rgba(53, 53, 53, 0.7);
     }
 }
 
@@ -415,6 +423,13 @@ nav ul li a:hover {
     }
 }
 
+@media (max-width: 800px) {
+
+    .col {
+        background: rgba(53, 53, 53, 0.7);
+    }
+}
+
 
 
 
@@ -479,6 +494,7 @@ nav ul li a:hover {
     margin-top: 15px;
     color: #fcfc00;
     font-size: 20px;
+    z-index: -1;
 }
 
 .contact span:hover {
@@ -493,4 +509,15 @@ nav ul li a:hover {
 
 .contact #location:hover {
     border-bottom: solid rgb(252, 252, 0);
+}
+
+@media (max-width: 800px) {
+
+    .contact {
+        font-size: 0.5em;
+    }
+
+    .contact h2 {
+        font-size: 40px;
+    }
 }
