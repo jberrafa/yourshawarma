@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.084), rgba(0, 0, 0, 0.55)),
+    url('../images/ys1.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    padding: 0 5%;
+    position: relative;
+    /* border: solid green; */
+
+    /* animation */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    width: 100%;
+    /* max-width: 1800px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    /* background-color: rgb(62, 62, 62); */
+    /* border: solid salmon; */
+}
+
+.logo img {
+    width: 120px;
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    /* margin-right: 5vw; */
+    padding: 0 2vw;
+    /* border: solid orange; */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20;
+    font-weight: bold;
+    padding: 5px 2px;
+}
+
+nav ul li a:hover {
+    color: rgb(252, 252, 0);
+    border-bottom: 3px solid rgb(252, 252, 0)
+}
+
+.close-icon {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+
+/* ------------------------------------------ */
+
+/* Home Page Content */
+
+.text-box {
+    margin-top: 10%;
+    font-size: 22px;
+    color: white;
+    /* border: solid blue; */
+}
+
+.text-box h1 {
+    font-size: 85px;
+    font-weight: 600;
+    line-height: 100px;
+    margin-bottom: 5px;
+}
+
+.text-box p {
+    margin-left: 15px;
+    /* border: solid yellow; */
+    font-size: 30px;
+}
+
+/* Order Online Button */
+.text-box button {
+    transition: all .5s ease;
+    color: rgb(252, 252, 0);
+    border: 3px solid rgb(252, 252, 0);
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    font-weight: bold;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.text-box button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(252, 252, 0);
+}
+
+#location {
+    font-size: 15px;
+    color: rgb(227, 227, 227);
+    margin-top: 15px;
+}
+
+.text-box a {
+    margin-left: 5px;
+    color: rgb(252, 252, 0);
+    text-decoration: none;
+}
+
+.text-box a:hover {
+    border-bottom: solid rgb(252, 252, 0);
+}
+
+
+
+/* Daily Specials */
+
+.specials-row {
+    /* border: solid brown; */
+    width: 100%;
+    margin-top: 15px;
+    display: grid;
+    /* grid-template-columns: repeat( auto-fill, minmax(500px, 1fr) ); */
+    grid-template-columns: repeat(7, 1fr);
+    /* gap: 20px; */
+    /* grid-auto-rows: minmax(100px, auto); */
+    text-align: center;
+    justify-items: center;
+    overflow-x: auto;
+    column-gap: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.specials-col {
+    background: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    border-radius: 30px;
+    padding: 15px 30px;
+    display: inline;
+}
+
+.specials-col:hover {
+    color: rgb(252, 252, 0);
+}
+
+.specials-row img {
+    padding-top: 10px;
+    width: 200px;
+    max-width: 400px;
+    border-radius: 30px;
+}
+#specials-headline {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 30px;
+}
+
+#price {
+    margin-top: 5px;
+}
+
+
+/* Scrollbar decoration */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: rgb(75, 75, 75);
+    border-radius: 50px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: rgb(252, 252, 0); 
+    border-radius: 50px;
+}
+
+/* Resizing of Daily Specials */
+
+@media only screen and (max-width: 1700px){
+    #specials-headline {
+        margin-top: 15%;
+    }
+}
+
+
+/* -------------------------------------------------- */
+
+
+/* --------------------- */
+
+/* For Mobile devices a hambuger menu will be used instead of a traditional desktop navbar */
+
+@media only screen and (max-width: 800px){
+
+    .logo img {
+        width: 90px;
+        cursor: pointer;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 35px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        font-size: 30px;
+        color: white;
+        padding: 10px;
+        letter-spacing: 5px;
+        position: relative;
+    }
+    
+    nav ul li a::after {
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #fcfc00;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width 0.5s;
+    } 
+    
+    nav ul li a:hover::after {
+        width: 100%;
+    }
+    
+    nav ul li a:hover {
+        border-bottom: none;
+    }
+
+    nav {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        z-index: 0;
+        top: -100vh;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: 1s;
+    }
+    
+    .close-icon {
+        width: 35px;
+        position: absolute;
+        right: 25px;
+        top: 30px;
+        cursor: pointer;
+        display: block;
+    }
+    
+    .menu-icon {
+        width: 35px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .text-box {
+        margin-top: 5%;
+        /* font-size: 22px; */
+        /* border: solid blue; */
+    }
+
+    .text-box h1 {
+        display: none;
+    }
+
+    .text-box p {
+        margin: 0 10px;
+        /* border: solid yellow; */
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------- */
+
+/* Menu Page */
+
+#menu-heading {
+    margin-top: 10%;
+    padding: 16px;
+    font-size: 50px;
+}
+
+.menu h3 {
+    padding: 16px;
+    font-size: 25px;
+    color: rgb(252, 252, 0);
+}
+
+.grid {
+    display: grid;
+    grid-gap: 16px;
+    padding: 16px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.col {
+    background-color: rgba(0, 0, 0, 0.436);
+    padding: 16px;
+    font-size: 20px;
+    text-align: center;
+    align-self: start;
+}
+
+.col h4 {
+    text-align: left;
+}
+
+.col h6 {
+    text-align: left;
+}
+
+.col img {
+    display: none;
+    width: 250px;
+    padding-top: 10px;
+    border-radius: 30px;
+}
+
+.col:hover img{
+    display: block;
+}
+
+.col:hover h4 {
+    color: rgb(252, 252, 0);
+}
+
+
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-riceplates {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 1500px) {
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    #menu-heading {
+        margin-top: 5%;
+    }
+}
+
+
+
+
+/* ---------------------------------------- */
+
+/* Order Page */
+
+.order img {
+    width: 200px;
+    cursor: pointer;
+    /* border-radius: 20px; */
+}
+
+.order h2 {
+    margin-top: 8%;
+    font-size: 60px;
+    padding-bottom: 15px;
+}
+
+@media (min-width: 1500px) {
+
+    .order h2 {
+        margin-top: 5%;
+    }
+}
+
+
+/* ----------------------------------- */
+
+/* Contact Page */
+
+.contact h2 {
+    margin-top: 8%;
+    font-size: 60px;
+    padding-bottom: 15px;
+}
+
+.contact h3 {
+    font-size: 17px;
+    padding-bottom: 10px;
+    color: rgb(227, 227, 227);
+}
+
+#hours {
+    color: white;
+}
+
+#instainfo {
+    padding-top: 15px;
+    margin-top: 25px;
+}
+
+.contact img {
+    width: 50px;
+    margin-top: 0px;
+    padding: 5px;
+}
+
+.contact span{
+    text-decoration: none;
+    position: absolute;
+    margin-top: 15px;
+    color: #fcfc00;
+    font-size: 20px;
+}
+
+.contact span:hover {
+    color: black;
+}
+
+.contact #location {
+    margin-left: 5px;
+    color: rgb(252, 252, 0);
+    text-decoration: none;
+}
+
+.contact #location:hover {
+    border-bottom: solid rgb(252, 252, 0);
+}
