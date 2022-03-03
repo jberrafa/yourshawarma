@@ -329,7 +329,8 @@ nav ul li a:hover {
     }
 
     body {
-        background-image: url(./images/mobile-bg.png)
+        background-image: url(./images/mobile-bg.png);
+        background-size: auto;
     }
 
     .specials-row {
